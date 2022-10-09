@@ -21,6 +21,9 @@ public class RandomFunctionGenerator {
 				if(c== 0) {
 					c = 1;
 				}
+				if(nenner== 0) {
+					nenner = 1;
+				}
 				f = new Monome(zähler/nenner, c);
 			}
 			

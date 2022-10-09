@@ -70,6 +70,24 @@ public class Monome extends Function{
 		x = f;
 		
 	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		if(this.getExpo() != 0) {
+			if(this == neutralElement) {
+				return "x";
+			}
+			String ausgabe = "(";
+			ausgabe += getCoefficient() + "*"+getX().toString() +"^("+ expo+ "))";
+			return ausgabe;
+		}
+		else {
+			String ausgabe = "";
+			ausgabe += coefficient;
+			return ausgabe;
+		}
+		
+	}
 	
 	
 }

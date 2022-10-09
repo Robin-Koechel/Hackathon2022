@@ -20,5 +20,6 @@ public abstract class Function {
 		}
 		return same;
 	}
+	abstract public String toString();
 	
 }

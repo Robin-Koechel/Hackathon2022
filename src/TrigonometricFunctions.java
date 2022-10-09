@@ -28,4 +28,10 @@ public class TrigonometricFunctions extends Function{
 		x = f;
 		
 	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		
+		return null;
+	}
 }

@@ -39,6 +39,16 @@ public class ExponentialFunction extends Function{
 		x = f;
 		
 	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		String ausgabe= "(";
+		ausgabe+= coefficient;
+		ausgabe += "*e^(";
+		ausgabe += x.toString()+ "))";
+	
+		return ausgabe;
+	}
 	
 	
 }

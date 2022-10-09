@@ -59,5 +59,12 @@ public class ConnectTwoFunctions extends Function {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		String ausgabe = "";
+		ausgabe += connector;
+		return ausgabe;
+	}
 	
 }
