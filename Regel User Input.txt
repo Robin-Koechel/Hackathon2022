@@ -1,1 +1,10 @@
-only +, -, *, /, ^
+ use as many parantheses as possible
+ use only +, -, *, /, ^ operations
+ e == 2.718
+ use sin and cosine like S(x), C(x)
+ write monomes always like ax^b => 9 = 9x^0, 3x = 3x^1
+ write exponetial functions always like b*2.718^c*x
+ always souround a function with parantheses
+ ************************************
+ * You need to stick to the rules!! *
+ ************************************

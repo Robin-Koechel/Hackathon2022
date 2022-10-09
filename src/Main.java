@@ -1,6 +1,6 @@
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {/*
 		RandomFunctionGenerator r = new RandomFunctionGenerator();
 		ConnectTwoFunctions c =  r.getRandomFunctionBig(10);
 		System.out.println(c.getY(1));
@@ -23,6 +23,13 @@ public class Main {
 	    //cPrüfen2 = new ConnectTwoFunctions(cPrüfen2, m2, '*');
 		//cPrüfen = new ConnectTwoFunctions(cPrüfen, cPrüfen2, '+');
 		System.out.println(Function.testIFFunctionsAreTheSame(n, cos));
+		*/
+
+		Parser p = new Parser();
+		String line = "S(C(3x^2))-(8x^1)-(9x^0)";
+		p.stringToFunction(line);
+		System.out.println(p.getMap());
+
 	}
 	
 	
