@@ -26,7 +26,7 @@ public class ConnectTwoFunctions extends Function {
 			Function uA= f1.derivative();
 			Function vA = f2.derivative();
 			ConnectTwoFunctions leftSide = new ConnectTwoFunctions(uA, v, '*');
-			ConnectTwoFunctions rightSide = new ConnectTwoFunctions(u,vA,  '+');
+			ConnectTwoFunctions rightSide = new ConnectTwoFunctions(u,vA,  '*');
 			ConnectTwoFunctions all = new ConnectTwoFunctions(leftSide, rightSide,'+');
 			return all;
 		}
@@ -42,8 +42,22 @@ public class ConnectTwoFunctions extends Function {
 			return f1.getY(x)* f2.getY(x);
 		}
 		else {
-			return f1.getY(x) + f2.getY(x);
+			double df1 = f1.getY(x);
+			double df2 = f2.getY(x);
+
+			return df1 + df2;
 		}
+	}
+	@Override
+	public void setX(Function f) {
+		f1.setX(f);
+		f2.setX(f);
+		
+	}
+	@Override
+	public Function getX() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }
