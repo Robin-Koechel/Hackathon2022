@@ -2,7 +2,7 @@
 public class Monome extends Function{
 	private double coefficient;
 	private double expo;
-	private Function x;
+	
 	
 	public double getExpo() {
 		return expo;
@@ -14,6 +14,11 @@ public class Monome extends Function{
 		return x;
 	}
 	public Monome(double expo,double c) {
+		this.expo = expo;
+		coefficient =  c;
+		setX(neutralElement);
+	}
+	public Monome(double expo,double c, boolean neutralElement) {
 		this.expo = expo;
 		coefficient =  c;
 	}
@@ -33,7 +38,18 @@ public class Monome extends Function{
 	}
 	@Override
 	public double getY(double x) {
-		return getCoefficient()* Math.pow(this.x.getY(x),expo);
+		if(this == neutralElement) {
+			return x;
+		}
+		else {
+			return getCoefficient()* Math.pow(this.x.getY(x),expo);
+
+		}
+	}
+	@Override
+	public void setX(Function f) {
+		x = f;
+		
 	}
 	
 	

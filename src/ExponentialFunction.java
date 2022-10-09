@@ -2,7 +2,6 @@
 public class ExponentialFunction extends Function{
 	private double base;
 	private double coefficient;
-	private Function x;
 	
 	public double getBase() {
 		return base;
@@ -16,13 +15,13 @@ public class ExponentialFunction extends Function{
 	public ExponentialFunction(double b,double c) {
 		base =b;
 		coefficient =  c;
+		setX(neutralElement);
+
 	}
 	
-	public static ExponentialFunction getARandomExpoFunc() {
-		
-	}
+	
 	public Function getEAsBasis() {
-		
+		return this;
 	}
 	
 	@Override
@@ -34,6 +33,11 @@ public class ExponentialFunction extends Function{
 	@Override
 	public double getY(double x) {
 		return getCoefficient()* Math.pow(base, this.x.getY(x));
+	}
+	@Override
+	public void setX(Function f) {
+		x = f;
+		
 	}
 	
 	

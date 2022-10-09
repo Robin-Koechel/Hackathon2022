@@ -16,4 +16,6 @@ public class Cosinus extends TrigonometricFunctions {
 		return getCoefficient()* Math.cos(getX().getY(x));
 	}
 
+	
+
 }
