@@ -26,9 +26,15 @@ public class Monome extends Function{
 	public Function derivative() {
 		
 		if(expo != 0) {
-			Function f = new Monome(expo-1,coefficient * expo );
-			ConnectTwoFunctions c = new ConnectTwoFunctions(f, x.derivative(), '*');
-			return c;
+			if(this != neutralElement) {
+				Function f = new Monome(expo-1,coefficient * expo );
+				ConnectTwoFunctions c = new ConnectTwoFunctions(f, x.derivative(), '*');
+				return c;
+			}
+			else{
+				return new Monome(0, 1);
+			}
+			
 		}
 		else {
 			Function f = new Monome(1,0);
@@ -38,13 +44,26 @@ public class Monome extends Function{
 	}
 	@Override
 	public double getY(double x) {
-		if(this == neutralElement) {
-			return x;
+		if(expo == 0) {
+			if(this == neutralElement) {
+				return x;
+			}
+			else {
+				return getCoefficient()* Math.pow(this.x.getY(x),expo);
+
+			}
 		}
 		else {
-			return getCoefficient()* Math.pow(this.x.getY(x),expo);
-
+			if(coefficient != 0) {
+				return 1;
+			}
+			else {
+				return 0;
+			}
+			
 		}
+
+		
 	}
 	@Override
 	public void setX(Function f) {

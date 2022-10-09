@@ -8,27 +8,47 @@ public class RandomFunctionGenerator {
 			 random = (int)(Math.random()* 20);
 			
 			if(random > difficulty) {
-				f = new Monome((int)(Math.random()*8-4), Math.round(Math.random()*8-4));
+				int c = (int)(Math.random()*8-4);
+				if(c== 0) {
+					c = 1;
+				}
+				f = new Monome((int)(Math.random()*8-4), c);
 			}
 			else {
 				int nenner =(int) (Math.random()*3);
 				int zähler =(int) (Math.random()*3);
-				f = new Monome(zähler/nenner, Math.round(Math.random()*8-4));
+				int c = (int)(Math.random()*8-4);
+				if(c== 0) {
+					c = 1;
+				}
+				f = new Monome(zähler/nenner, c);
 			}
 			
 		}
 		else if(random == 1) {
 			random = (int)(Math.random()*2);
 			if(random == 0 ) {
-				f = new Sinus((int)(Math.random()*8-4));
+				int c = (int)(Math.random()*8-4);
+				if(c== 0) {
+					c = 1;
+				}
+				f = new Sinus(c);
 			}
 			else {
-				f = new Cosinus((int)(Math.random()*8-4));
+				int c = (int)(Math.random()*8-4);
+				if(c== 0) {
+					c = 1;
+				}
+				f = new Cosinus(c);
 
 			}
 		}
 		else {
-			f = new ExponentialFunction(Math.E, (int)(Math.random()*8-4));
+			int c = (int)(Math.random()*8-4);
+			if(c== 0) {
+				c = 1;
+			}
+			f = new ExponentialFunction(Math.E, c);
 		}
 			
 		return f;
